@@ -10,9 +10,11 @@ body {
   padding: 0;
 }
 
-.text {
+h1 {
   font-family: arial;
 }
+
+
 
 .Wrapper {
   width: 420px;
@@ -27,6 +29,7 @@ body {
 .Wrapper h1 {
   font-size: 36px;
   text-align: center;
+  color: white;
 }
 
 .Wrapper .input-box {
@@ -37,17 +40,17 @@ body {
 }
 
 .input-box input {
-  width: 100%;
+   width: 100%;
   height: 100%;
+  border-radius: 30px;
+  background: rgba(63, 63, 63, 0.171);
   border: none;
-  outline: none;
-  background: transparent;
-  border: 2px solid rgba(214, 214, 214, 0.8);
-  border-radius: 50px;
-  font-size: 16px;
-  color: white;
   padding-left: 15px;
+  color: white;
+  outline: none;
 }
+
+
 
 .input-box input::placeholder {
   color: white;
@@ -67,18 +70,21 @@ body {
 }
 
 .btn {
-  background-color: white;
-  border: none;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 100%;
   height: 45px;
+  background-color: rgb(83, 255, 98);
+  border: none;
+  border-radius: 30px;
   font-size: 20px;
-  border-radius: 22.5px;
-  font-weight: 550;
+  font-weight: 600;
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  color: white;
 }
 
 .btn:hover {
-  background-color: rgb(216, 216, 216);
+  background-color: rgb(64, 204, 75);
   cursor: pointer;
 }
 

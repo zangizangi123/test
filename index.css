@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #121212;
+}
+
+h1 {
+  font-family: arial;
+}
+
+.top {
+  display: flex;
+  height: 500px;
+  background: url(images/login/serenity-in-simplicity-s4lppaqo5zq49v0g.jpg)  no-repeat top right ;
+  align-items: center;
+  justify-content: space-between;
+  background-size: cover;
+}
+
+
+.text {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 100px;
+    margin-top: 100px;
+    flex-direction: column;
+}
+
+.text h3 {
+    color: #d8d8d8;
+}
+.text h1 {
+    color: white;
+}
+
+.green{
+    color: rgb(83, 255, 98);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #1e1e1e;
+  color: white;
+  position: sticky;
+  top: 0;
+  height: 55px;
+  z-index: 1000;
+}
+
+.topbar .Boblox {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  
+  width: 420px;
+  background: rgba(123, 122, 128, 0.3);
+  backdrop-filter: blur(25px);
+  border: 2px solid rgba(95, 95, 95, 0.4);
+  color: white;
+  border-radius: 10px;
+  padding: 25px;
+  text-align: center;
+}
+
+.discover h1{
+    color: white;
+    font-size: 36px;
+}
+.wrapper h1 {
+  font-size: 36px;
+  text-align: center;
+  color: white;
+}
+
+.discover h2{
+  color: white;
+}
+.wrapper h2 {
+  text-align: center;
+  color: white;
+}
+
+
+.wrapper .inputbox {
+  position: relative;
+  width: 100%;
+  height: 50px;
+  margin: 30px 0;
+}
+
+.wrapper .input {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  background: rgba(66, 66, 66, 0.6);
+  border: none;
+  padding-left: 15px;
+  color: white;
+  outline: none;
+}
+
+.wrapper .input::placeholder {
+  color: white;
+  font-size: 16px;
+}
+
+.inputbox i{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+}
+
+label {
+  color: white;
+  text-align: top;
+}
+
+.wrapper p {
+  color: white;
+  text-align: center;
+}
+
+.btn {
+  margin-top: 2px;
+  margin-bottom: 20px;
+  height: 45px;
+  background-color: rgb(83, 255, 98);
+  border: none;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 550;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  color: white;
+}
+
+.wrapper .btn {
+    width: 100%;
+}
+
+.btn:hover {
+  background-color: rgb(64, 204, 75);
+  cursor: pointer;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  font-weight: 650;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.part-1 {
+    height: 500px;
+    display: flex;
+    margin-top: 155px;
+    margin-left: 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.part-1 .text {
+    display: flex;
+    flex-direction: column; /* stack children vertically */
+    justify-content: flex-start;/* align children to the left of the container */
+}
+
+.part-1 h3 {
+    color: #d8d8d8;
+}
+
+.discover img {
+    height: 40vh;
+    width: auto;
+}
+
+.part-1 img {
+    margin-right: 180px;
+}
+
+.part-2 img {
+    margin-left: 60px;
+}
+
+.part-2 {
+    height: 500px;
+    display: flex;
+    margin-top: 155px;
+    margin-left: 100px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.part-2 .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-right: 180px;
+}
+
+.purple {
+  color: rgb(245, 20, 245);
+}
+.Join .btn{
+  width: 150px;
+}
+
+.Join {
+  display: flex;
+  align-items: center;
+  height: 250px;
+  background-color: rgb(40, 115, 255);
+}
+
+.Contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.Contents .btn{
+  margin-top: 15px;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 300;
+  color: #d8d8d8;
+}
+
+.end {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 50px;
+  color: white;
+}
+

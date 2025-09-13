@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Upload Game</title>
+</head>
+<body>
+  <h1>Upload Your Game</h1>
+  <form id="uploadForm">
+    <input type="text" id="name" placeholder="Game Name" required><br>
+    <textarea id="description" placeholder="Description" required></textarea><br>
+    <input type="file" id="image" accept=".png,.jpg,.jpeg" required><br>
+    <input type="file" id="file" accept=".pck,.zip,.png" required><br>
+    <button type="submit">Upload</button>
+  </form>
+
+  <!-- Firebase v8 scripts -->
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+
+  <script>
+    // Your Firebase config
+    const firebaseConfig = {
+     apiKey: "AIzaSyAaxU10m2NHhGbciOMiUfhSrHeks8QujXg",
+     authDomain: "bobloxauth2.firebaseapp.com",
+     databaseURL: "https://bobloxauth2-default-rtdb.europe-west1.firebasedatabase.app",
+     projectId: "bobloxauth2",
+     storageBucket: "bobloxauth2.firebasestorage.app",
+     messagingSenderId: "302659528234",
+     appId: "1:302659528234:web:ce6b02d848a991fc0c0553"
+    };
+
+    // Initialize
+    firebase.initializeApp(firebaseConfig);
+    const storage = firebase.storage();
+    const db = firebase.database();
+
+    // Upload logic
+    const uploadForm = document.getElementById("uploadForm");
+    uploadForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const description = document.getElementById("description").value.trim();
+      const imageFile = document.getElementById("image").files[0];
+      const gameFile = document.getElementById("file").files[0];
+
+      if (!name || !description || !imageFile || !gameFile) {
+        alert("Please fill out all fields.");
+        return;
+      }
+
+      const gameId = Date.now();
+
+      try {
+        // Upload icon
+        const imageRef = storage.ref(`games/${gameId}/icon_${imageFile.name}`);
+        await imageRef.put(imageFile);
+        const imageURL = await imageRef.getDownloadURL();
+
+        // Upload game file
+        const gameRef = storage.ref(`games/${gameId}/${gameFile.name}`);
+        await gameRef.put(gameFile);
+        const gameURL = await gameRef.getDownloadURL();
+
+        // Save metadata to DB
+        await db.ref(`games/${gameId}`).set({
+          id: gameId,
+          name,
+          description,
+          icon: imageURL,
+          file: gameURL
+        });
+
+        alert("Game uploaded successfully!");
+        uploadForm.reset();
+      } catch (err) {
+        console.error(err);
+        alert("Upload failed, check console for errors.");
+      }
+    });
+  </script>
+</body>
+</html>

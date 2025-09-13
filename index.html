@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
+    <title>Welcome To Boblox</title>
+</head>
+<body>
+    <header class="topbar">
+        <a class="Boblox" href="index.html">Boblox</a>
+    </header>
+
+    <div class="top">
+        <div class="text">
+            <h1> Join a community, meet new people!</h1>
+            <h3> In Boblox, you can build and explore a lot of unique games, each custom made from the community! </h3>
+            <h3> Customize your avatar and make your own creations!</h3>
+        </div>
+
+        <div class="wrapper" id="wrapper">
+            <form id="registerForm" >
+                <h2>Create an account for FREE to not miss out on the fun!</h2>
+                <div class="inputbox">
+                    <input type="text" placeholder="Username" required class="input" id="usernameInput">
+                    <i class='bx bxs-user'></i>
+                </div>
+                <button type="button" class="btn" id="registerBtn" onclick="saveInput()">
+                    &#9654; Register
+                </button>
+                <p>Already have an account? <a href="LogIn.html">Log In</a></p>
+            </form>
+        </div>
+    </div>
+    <div class="discover">
+        <div class="part-1">
+            <div class="text">
+                <h1><span class="green">Play</span> the games made by our community!</h1>
+                <h3>Play the games our online comunity made (still W.I.P).</h3>
+            </div>
+            <img src="images/elementor-placeholder-image.png">
+        </div>
+
+        <div class="part-2">
+            <img src="images/elementor-placeholder-image.png">
+            <div class="text">
+                <h1><span class="purple">Meet</span> new people!</h1>
+                <h3>Boblox is a great place to meet and chat with other players! <p>What are you waiting for? <a href="register.html">Join in on the fun!</a></p> </h3>
+            </div>
+        </div>
+
+        <div class="Join">
+            <div class="Contents">
+               <h1>Join Boblox today</h1>
+                <button class="btn" onclick="join()"> <i class='bx bxs-user'></i> Join Now!</button> 
+                <p>(completly FREE btw)</p>
+            </div>
+        </div>
+
+        <div class="end">
+            <h4>© Boblox 2025</h4>
+        </div>
+    </div>
+</body>
+</html>
